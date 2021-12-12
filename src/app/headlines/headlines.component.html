@@ -1,0 +1,16 @@
+<div class="container-fluid mt-5">
+  <h3><b>Berita Terkini</b></h3>
+  <div class="row">
+    <div class="col-sm-6" *ngFor="let headlines of topHeadlinesResult">
+      <div class="card" style="box-shadow: 5px 5px 5px grey">
+        <div class="card-body">
+          <img src="{{ headlines.urlToImage }}" width="50px" height="400px" class="card-img-top" alt="..." />
+          <h5 class="card-title">{{ headlines.title }}</h5>
+          <p><b>{{ headlines.author }}</b> || Published At {{ headlines.publishedAt }}</p>
+          <p class="card-text">{{ headlines.description }}</p>
+          <a href="{{ headlines.url }}" target="_blank" class="btn btn-danger btn-sm mt-2">Read More on {{ headlines.source[name] }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

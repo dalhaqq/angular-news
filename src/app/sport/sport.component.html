@@ -1,0 +1,19 @@
+<div class="container-fluid mt-5">
+    <h3><b>Berita Olahraga</b></h3>
+    <div class="row">
+      <div class="col-sm-6" *ngFor="let sportNews of sportNewsResult">
+        <div class="card" style="box-shadow: 5px 5px 5px grey">
+          <div class="card-body">
+            <img src="{{ sportNews.urlToImage }}" width="50px" height="500px" class="card-img-top" alt="..." />
+            <h5 class="card-title">{{ sportNews.title }}</h5>
+            <p><b>{{ sportNews.author }}</b> || Published At {{ sportNews.publishedAt }}</p>
+            <p class="card-text">{{ sportNews.description }}</p>
+            <a href="{{ sportNews.url }}" target="_blank" class="btn btn-danger btn-sm mt-2">Read More on {{ sportNews.source[name] }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  
+  
+  

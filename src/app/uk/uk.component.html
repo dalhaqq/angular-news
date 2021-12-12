@@ -1,0 +1,17 @@
+<div class="container-fluid mt-5">
+    <h3><b>British News</b></h3>
+    <div class="row">
+      <div class="col-sm-6" *ngFor="let ukNews of ukNewsResult">
+        <div class="card">
+          <div class="card-body">
+            <img src="{{ ukNews.urlToImage }}" width="50px" height="400px" class="card-img-top" alt="..." />
+            <h5 class="card-title">{{ ukNews.title }}</h5>
+            <p><b>{{ ukNews.author }}</b> || Published At {{ ukNews.publishedAt }}</p>
+            <p class="card-text">{{ ukNews.description }}</p>
+            <a href="{{ ukNews.url }}" target="_blank" class="btn btn-danger btn-sm mt-2">Read More on {{ ukNews.source[name] }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

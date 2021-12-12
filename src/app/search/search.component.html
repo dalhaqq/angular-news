@@ -1,0 +1,17 @@
+<div class="container-fluid mt-5">
+    <h3><b>Hasil pencarian berita untuk kata kunci: {{ keyword }}</b></h3>
+    <div class="row">
+      <div class="col-sm-6" *ngFor="let srcNews of SearchNewsResult">
+        <div class="card">
+          <div class="card-body">
+            <img src="{{ srcNews.urlToImage }}" width="50px" height="400px" class="card-img-top" alt="...">
+            <h5 class="card-title">{{  srcNews.title }}</h5>
+            <p><b>{{ srcNews.author }}</b> || Published At {{ srcNews.publishedAt }} </p>
+            <p class="card-text">{{  srcNews.description  }}</p>
+            <a href="{{  srcNews.url }}" target="_blank" class="btn btn-danger btn-sm mt-2">Read More...</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
